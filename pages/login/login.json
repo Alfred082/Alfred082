@@ -1,0 +1,9 @@
+{
+  "usingComponents": {},
+  "backgroundTextStyle": "dark",
+  "navigationBarTitleText": "Chris健康打卡平台",
+  "backgroundColor": "#ffffff",
+  "onReachBottomDistance": 50,
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black"
+}

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "qr-container": "/wx-qr/index"
+  },
+  "navigationBarBackgroundColor": "#c1303c",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true
+}

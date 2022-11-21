@@ -1,0 +1,36 @@
+{
+    "pages": [
+      "pages/login/login",
+      "pages/logs/logs",
+      "pages/index/index",
+      "pages/Health_Punch/Health_Punch",
+      "pages/list/index"
+    ],
+    "window": {
+      "backgroundTextStyle": "dark",
+      "navigationBarTitleText": "Chris健康打卡平台",
+      "backgroundColor": "#c1303c",
+      "onReachBottomDistance": 50,
+      "navigationBarBackgroundColor": "#c1303c",
+      "navigationBarTextStyle": "white",
+      "enablePullDownRefresh": true
+    },
+    "sitemapLocation": "sitemap.json",
+    "tabBar": {
+      "selectedColor": "#CC3333",
+      "list": [
+        {
+          "pagePath": "pages/index/index",
+          "text": "首页",
+          "iconPath": "/images/tabBar_index_noselectd.png",
+          "selectedIconPath": "/images/tabBar_index_selectd.png"
+        },
+        {
+          "pagePath": "pages/Health_Punch/Health_Punch",
+          "text": "我的",
+          "iconPath": "/images/tabBar_my_noselectd.png",
+          "selectedIconPath": "/images/tabBar_my_selectd.png"
+        }
+      ]
+    }
+}
