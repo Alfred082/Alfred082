@@ -1,19 +1,27 @@
 <!--pages/index/index.wxml-->
 <view>
-  <image class="header_bg" mode="widthFix" src="../../images/Index_Background.png"><text>yanhui</text></image>
-
-  <text class="index_title_left">*辉</text>
-  <text class="index_title_right">**************4414</text>
+  <image class="header_bg" mode="widthFix" src="../../images/Index_Background.png"></image>
+  <text class="index_title_left">*{{hideUserName}}</text>
+  <text class="index_title_right">**************{{hideUserIdCard}}</text>
   <!-- 健康码显示卡片 -->
   <view class="health_code_card">
     <view class="health_code_item" bindtap="getTime">{{Time}}</view>
-    <view class="flex-center">
+    <block class="flex-center" wx:if="{{punchOrNot}}">
       <qr-container class="flex-center" text="{{qrTxt}}" size="350" dotScale="0.7"
-      canvasMode="true" colorDark="#06a352"></qr-container>
-    </view>
-    <image class="no_abnormal_conditions" src="../../images/no_abnormal_conditions.png"></image>
-    <text class="QR_Code_description">未见异常</text>
-    <image class="QR_code_interpretation_icon" src="../../images/QR_code_interpretation_icon.png"></image>
+      canvasMode="false" colorDark="#06a352" colorLight="#FFFFFF" magin="0" backgroundDimming="rgba(0,0,0,0)" autoColor="true"></qr-container>
+    </block>
+    <block wx:if="{{!punchOrNot}}">
+      <image class="greyQRImg" src="../../images/QR_grey.jpg"></image>
+    </block>
+    <block wx:if="{{punchOrNot}}">
+      <image class="no_abnormal_conditions" src="../../images/no_abnormal_conditions.png"></image>
+      <text class="QR_Code_description">未见异常</text>
+      <image class="QR_code_interpretation_icon" src="../../images/QR_code_interpretation_icon.png"></image>
+    </block>
+    <block wx:if="{{!punchOrNot}}">
+      <image class="noPunch" src="../../images/QR_code_interpretation_icon.png"></image>
+      <text class="noPunchDescription">尚未打卡</text>
+    </block>
 
     <!-- 公告 -->
     <view class="notice_item" wx:for="{{notice}}" wx:key="id">
@@ -25,9 +33,17 @@
 
     <!-- 操作选项 -->
     <view class="operation_list">
-      <view class="operation_item" wx:for="{{operationList}}" wx:key="id">
-        <image src="{{item.icon}}"></image>
-        <text>{{item.name}}</text>
+      <view class="operation_item" bindtap="toHealthDetails">
+        <image src="../../images/operation_icron1.png"></image>
+        <text>我的健康信息详情</text>
+      </view>
+      <view class="operation_item" bindtap="toHealthPunch">
+        <image src="../../images/operation_icron2.png"></image>
+        <text>每日健康打卡</text>
+      </view>
+      <view class="operation_item">
+        <image src="../../images/operation_icron3.png"></image>
+        <text>核酸检测登记</text>
       </view>
     </view>
   </view>
@@ -44,10 +60,6 @@
       </view>
     </view>
   </view>
-  <view class="footer">
-        <button open-type="share">分享好友</button> |
-        <button open-type="contact">联系客服</button> |
-        <button bindtap="creatGroup">创建小组</button>
-    </view>
+  <view class="footer">宁夏大学信息工程学院</view>
     
 </view>

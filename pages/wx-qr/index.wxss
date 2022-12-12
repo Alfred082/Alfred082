@@ -4,7 +4,7 @@
 }
 
 .qr-container {
-  position: relative;
+  position: absolute;
 }
 
 .hide-canvas {

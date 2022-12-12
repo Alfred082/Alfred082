@@ -1,0 +1,86 @@
+/* pages/register/register.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.idCard {
+  width: 260rpx;
+  height: 190rpx;
+  position: absolute;
+  left: 374rpx;
+  top: 70rpx;
+  transform: translateX(-50%); /* 移动元素本身50% */
+}
+.Authorization {
+  position: absolute;width: 652rpx; height: 42rpx; display: block; box-sizing: border-box; left: 50rpx; top: 350rpx
+}
+.Authorization_1 {
+  font-size: 32rpx;
+  color: #787878;
+}
+.Authorization_2 {
+  font-size: 37rpx;
+  color: #0e0d0d;
+}
+.services_item {
+  position: absolute;
+  top: 480rpx;
+  left: 40rpx;
+  width: 630rpx;
+  height: 115rpx;
+  box-sizing: border-box;
+  align-items: center;
+  border-bottom: 1rpx solid #e7e6e6;
+  border-top: 1rpx solid #e7e6e6;
+  padding-top: 10rpx;
+  padding-left: 20rpx;
+ }
+ 
+ .Authorization_3 {
+  font-size: 27rpx;
+  color: #787878;
+}
+
+checkbox .wx-checkbox-input {
+  width: 25rpx;
+  height: 25rpx;
+  position: absolute;
+  top: 624rpx;
+  left: 50rpx;
+}
+.checkItem {
+  position: absolute;
+  top: 615rpx;
+  left: 90rpx;
+}
+.Authorization_4 {
+  font-size: 25rpx;
+  color: #aca8a8;
+}
+.Authorization_5 {
+  font-size: 25rpx;
+  color: #c12f3b;
+}
+.terms_btn {
+  border: none;
+  color: #fff;
+  background: #c02c38;
+  display: block;
+  width: 300rpx;
+  height: fit-content;
+  position: absolute;
+  top: 720rpx;
+  left: 380rpx;
+}
+.terms_btn_1 {
+  border: none;
+  color: #666666;
+  background: #fafafa;
+  display: block;
+  width: 300rpx;
+  height: fit-content;
+  position: absolute;
+  top: 720rpx;
+  left: 50rpx;
+}
+

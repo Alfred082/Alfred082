@@ -1,0 +1,202 @@
+/* pages/bind/bind.wxss */
+.personal_information {
+  font-size: 65rpx;
+  font-weight: bold;
+  position: absolute;
+  left: 40rpx;
+  top: 20rpx;
+}
+
+.purpose {
+  font-size: 30rpx;
+  color: #181717;
+  position: absolute;
+  left: 40rpx;
+  top: 140rpx;
+}
+
+/* 以下是表单样式 */
+.form_list {
+  margin: 200rpx auto 40rpx;
+  width: 680rpx;
+  position: absolute;
+  top: 10rpx;
+  left: 30rpx;
+}
+
+.form__title {
+  font-size: 40rpx;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.section {
+  margin: 16rpx;
+  padding-bottom: 16rpx;
+  border-bottom: 2rpx solid rgba(0, 0, 0, 0.1);
+}
+
+.section input, .picker {
+  height: 60rpx;
+  font-size: 32rpx;
+  line-height: 1.5;
+}
+
+.picker {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.no_picker {
+  color: #808080;
+}
+
+.piecker_tag {
+  text-align: right;
+  flex-basis: 100rpx;
+  color: #bb313d;
+}
+
+.section__title {
+  font-size: 36rpx;
+  line-height: 2;
+}
+
+.section__title text {
+  color: #ea5849;
+}
+
+.status_group {
+  display: flex;
+  flex-direction: column;
+}
+
+.status_group radio, .status_group checkbox {
+  margin: 16rpx 0;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.status_group radio .wx-radio-input, .status_group checkbox .wx-checkbox-input {
+  width: 40rpx;
+  height: 40rpx;
+  border: 2rpx #bb313d solid;
+}
+
+.textarea {
+  width: 100%;
+  height: 100rpx;
+}
+
+.terms {
+  margin-top: 18rpx;
+}
+
+.checkbox-group-style {
+  width: 644rpx; height: 92rpx; display: block; box-sizing: border-box
+}
+
+.checkbox-style {
+  width: 578rpx; height: 84rpx; display: inline-block; box-sizing: border-box
+}
+
+.checkbox-style .wx-checkbox-input {
+  width: 35rpx;
+  height: 35rpx;
+}
+
+.terms_tag {
+  font-size: 28rpx;
+  color: #bb313d;
+  margin-left: 18rpx;
+  line-height: 2;
+}
+
+.terms checkbox .wx-checkbox-input {
+  width: 30rpx;
+  height: 30rpx;
+  border: 2rpx #bb313d solid;
+  position:absolute;
+  top:1400rpx;
+}
+
+.terms_text {
+  font-size: 26rpx;
+  color: #787878;
+  line-height: 1.5;
+  position: absolute;
+  top: 695px;
+  left:80rpx;
+  width: 566rpx; height: 92rpx; display: block; box-sizing: border-box; 
+}
+
+checkbox .wx-checkbox-input {
+  width: 25rpx;
+  height: 25rpx;
+  position: absolute;
+  top: 700px;
+  left: 10rpx;
+}
+
+.myCheckbox {
+  position:absolute;
+  top: 10px;
+  left: 10rpx;
+}
+
+.term_text {
+  position: absolute;
+  top: 1480rpx;
+  left: 80rpx;
+}
+
+.term_text1 {
+  font-size: 26rpx;
+  color: #787878;
+  line-height: 1.5;
+}
+
+.term_text2 {
+  font-size: 26rpx;
+  color: #bb313d;
+  line-height: 1.5;
+}
+
+.terms_btn {
+  position: absolute;
+  top: 1500rpx;
+  left: 40rpx;
+  width: 600rpx;
+  border: none;
+  margin-top: 60rpx;
+  color: #fff;
+  background: #bb313d;
+}
+
+.footer {
+  position: absolute;
+  left: 85rpx;
+  top: 1850rpx;
+  height: 200rpx;
+  margin: 40rpx auto 60rpx;
+  display: flex;
+  align-items: center;
+  color: #8c8c8c;
+}
+
+.footer button, .header button {
+  color: #8c8c8c;
+  margin: 0 8rpx;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 0;
+  border: none;
+  font-size: 28rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer button::after, .header button::after {
+  border: none;
+}

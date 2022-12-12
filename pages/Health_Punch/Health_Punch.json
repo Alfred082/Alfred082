@@ -1,4 +1,10 @@
 {
   "usingComponents": {},
-  "navigationBarTextStyle": "white"
+  "backgroundTextStyle": "dark",
+  "navigationBarTitleText": "每日健康打卡",
+  "backgroundColor": "#ffffff",
+  "onReachBottomDistance": 50,
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": false
 }

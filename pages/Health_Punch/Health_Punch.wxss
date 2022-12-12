@@ -9,6 +9,65 @@ page {
     flex-direction: column;
 }
 
+.user_name {
+  position: absolute;
+  top: 25rpx;
+  left: 12%;
+  transform: translateX(-50%);
+  font-size: 40rpx;
+  color: rgb(51, 50, 48);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+
+.user_idCard {
+  position: absolute;
+  top: 25rpx;
+  left: 70%;
+  transform: translateX(-50%);
+  font-size: 40rpx;
+  color: rgb(51, 50, 48);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+
+.person_info {
+  position: absolute;
+  top: 110rpx;
+  left: 37rpx;
+  border-radius: 8rpx;
+  width: 630rpx;
+  height: 330rpx;
+  background: #fff;
+  padding: 20rpx;
+}
+
+.contiguity{
+  position: absolute;
+  top: 530rpx;
+  left: 37rpx;
+  border-radius: 8rpx;
+  width: 630rpx;
+  height: 630rpx;
+  background: #fff;
+  padding: 20rpx;
+}
+
+.health{
+  position: absolute;
+  top: 1250rpx;
+  left: 37rpx;
+  border-radius: 8rpx;
+  width: 630rpx;
+  height: 980rpx;
+  background: #fff;
+  padding: 20rpx;
+}
+
 .header_bg {
     z-index: -1;
     width: 100%;
@@ -106,10 +165,15 @@ page {
     border-bottom: 2rpx solid rgba(0, 0, 0, 0.1);
 }
 
+.section1 {
+  margin: 16rpx;
+  padding-bottom: 16rpx;
+}
+
 .section input, .picker {
     height: 60rpx;
-    font-size: 32rpx;
-    line-height: 1.5;
+    font-size: 35rpx;
+    line-height: 2;
 }
 
 .picker {
@@ -125,7 +189,7 @@ page {
 .piecker_tag {
     text-align: right;
     flex-basis: 100rpx;
-    color: #3b82c5;
+    color: #bb313d;
 }
 
 .section__title {
@@ -143,15 +207,21 @@ page {
 }
 
 .status_group radio, .status_group checkbox {
-    margin: 16rpx 0;
-    font-size: 32rpx;
-    font-weight: bold;
+    margin: 18rpx 0;
+    font-size: 36rpx;
+    
+}
+
+
+.checkbox_text {
+  position: relative; left: 26rpx; top: 0rpx;
+  font-size: 34rpx;
 }
 
 .status_group radio .wx-radio-input, .status_group checkbox .wx-checkbox-input {
     width: 40rpx;
     height: 40rpx;
-    border: 2rpx #3b82c5 solid;
+    border: 2rpx #797676 solid;
 }
 
 .textarea {
@@ -161,11 +231,13 @@ page {
 
 .terms {
     margin-top: 18rpx;
+    position: absolute;
+    top: 2300rpx;
 }
 
 .terms_tag {
     font-size: 28rpx;
-    color: #3b82c5;
+    color: #bb313d;
     margin-left: 18rpx;
     line-height: 2;
 }
@@ -175,20 +247,25 @@ page {
     flex-basis: 38rpx;
     width: 30rpx;
     height: 30rpx;
-    border: 2rpx #3b82c5 solid;
+    border: 2rpx #bb313d solid;
+}
+
+.check_text{
+  width: 688rpx; height: 84rpx; display: inline-block; box-sizing: border-box
 }
 
 .terms_text {
-    color: #ea5849;
-    font-size: 28rpx;
-    line-height: 1.2;
+    font-size: 32rpx;
+    line-height: 1.5;
+    width: 600rpx;
+    position: relative; left: 12rpx; top: -1rpx
 }
 
 .terms_btn {
     border: none;
     margin-top: 60rpx;
     color: #fff;
-    background: #3b82c5;
+    background: #bb313d;
 }
 
 .footer {
@@ -196,6 +273,9 @@ page {
     display: flex;
     align-items: center;
     color: #8c8c8c;
+    position: absolute;
+    top:2500rpx;
+    height: 300rpx;
 }
 
 .footer button, .header button {
@@ -209,6 +289,7 @@ page {
     justify-content: center;
     align-items: center;
 }
+
 
 .footer button::after, .header button::after {
     border: none;

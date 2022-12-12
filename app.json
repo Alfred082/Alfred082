@@ -1,10 +1,16 @@
 {
     "pages": [
       "pages/login/login",
-      "pages/logs/logs",
-      "pages/index/index",
+      "pages/index/index", 
+      "pages/register/register",
+      "pages/bind/bind",
       "pages/Health_Punch/Health_Punch",
-      "pages/list/index"
+      "pages/list/index",
+      "pages/logs/logs",
+      "pages/wx-qr/index",
+      "pages/search/search",
+      "pages/my/my",
+      "pages/Health_Details/Health_Details"
     ],
     "window": {
       "backgroundTextStyle": "dark",
@@ -26,7 +32,7 @@
           "selectedIconPath": "/images/tabBar_index_selectd.png"
         },
         {
-          "pagePath": "pages/Health_Punch/Health_Punch",
+          "pagePath": "pages/my/my",
           "text": "我的",
           "iconPath": "/images/tabBar_my_noselectd.png",
           "selectedIconPath": "/images/tabBar_my_selectd.png"

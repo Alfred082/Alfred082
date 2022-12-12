@@ -1,0 +1,70 @@
+<!--pages/bind/bind.wxml-->
+<text class="personal_information">个人信息</text>
+<text class="purpose">信息将与当前微信绑定（用于身份验证）</text>
+
+<!-- 以下是表单内容 -->
+<form class="form_list" bindsubmit="formSubmit">
+  <view class="section">
+    <view class="section__title">姓名</view>
+    <input name="name" value="{{userInfo.name}}" maxlength="10" placeholder="请输入真实姓名" />
+  </view>
+  <view class="section">
+    <view class="section__title">性别</view>
+    <picker name="gender" bindchange="bindPickerGender" value="{{gender}}" range="{{genderList}}">
+      <view class="picker {{gender?'':'no_picker'}}">
+        <text>{{gender?gender:'请选择性别'}}</text>
+        <text class="piecker_tag">选择</text>
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <view class="section__title">年龄</view>
+    <input type="number" name="age" value="{{userInfo.age}}" maxlength="4" placeholder="请输入年龄" />
+  </view>
+  <view class="section">
+    <view class="section__title">证件类型</view>
+    <picker name="document" bindchange="bindPickerDocument" value="{{document}}" range="{{documentList}}">
+      <view class="picker {{document?'':'no_picker'}}">
+        <text>{{document?document:'请选择证件类型'}}</text>
+        <text class="piecker_tag">选择</text>
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <view class="section__title">证件号码</view>
+    <input name="card" type="idcard" value="{{userInfo.card}}" placeholder="请输入本人证件号码" />
+  </view>
+  <view class="section">
+    <view class="section__title">手机号</view>
+    <input type="number" name="phone" value="{{userInfo.phone}}" maxlength="11" placeholder="请输入手机号" />
+  </view>
+  <view class="section">
+    <view class="section__title">所在地区</view>
+    <picker mode="region" name="region" bindchange="bindPickerRegion" value="{{regionList}}">
+      <view class="picker {{region?'':'no_picker'}}">
+        <text>{{region?region:'请选择所在地区'}}</text>
+        <text class="piecker_tag">选择</text>
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <view class="section__title">详细地址</view>
+    <textarea style="position: relative; left: 0rpx; top: 24rpx" name="address" maxlength="50" class="textarea" placeholder="请输入具体地址，如：xxx街道xxx社区xxx号楼xxx单元xxx室" />
+  </view> 
+  <checkbox-group bindchange="checkedTerms" class="myCheckbox">
+    <checkbox color="#be414e" value="true"></checkbox>
+  </checkbox-group>
+  <text class="terms_text"  style="position: absolute; left: 79rpx; top: 1388rpx">我同意Chrish健康打卡平台使用我所提交的信息用于快捷登录</text>
+  <view class="term_text">
+    <text class="term_text1">查看</text>
+    <text class="term_text2">《用户服务协议》</text>
+    <text class="term_text1">和</text>
+    <text class="term_text2">《隐私政策》</text>
+  </view>
+  <button class="terms_btn" formType="submit" disabled="{{disabled}}">提交</button>
+</form>
+<view class="footer">
+  <button open-type="share">分享好友</button> |
+  <button open-type="contact">联系客服</button> |
+  <button bindtap="creatGroup">创建小组</button>
+</view>

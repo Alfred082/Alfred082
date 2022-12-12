@@ -1,0 +1,30 @@
+<!--pages/register/register.wxml-->
+<image class="idCard" src="{{idCardImageSrc}}"></image>
+
+<view class="Authorization">
+  <text class="Authorization_1">授权 </text>
+  <text class="Authorization_2">Chrish健康打卡平台</text>
+  <text class="Authorization_1"> 获取以下信息为您服务</text>
+</view>
+
+<view class="services_item">
+  <view>
+    <text class="Authorization_3"> · 获取您的公开信息（昵称、头像、性别等）</text>
+  </view>
+  <view>
+    <text class="Authorization_3"> · 使用身份信息（姓名、手机号、证件号码等）</text>
+  </view>
+</view>
+<checkbox-group bindchange="checkedTerms">
+  <checkbox color="#be414e" value="true"></checkbox>
+</checkbox-group>
+<view class="checkItem">
+  <text class="Authorization_4">我已认真阅读并同意</text>
+  <text class="Authorization_5">《用户服务协议》</text>
+  <text class="Authorization_4">及</text>
+  <text class="Authorization_5">《隐私服务》</text>
+</view>
+<button class="terms_btn_1">拒绝</button>
+<button class="terms_btn" disabled="{{disabled}}" bindtap="toBind">允许</button>
+
+

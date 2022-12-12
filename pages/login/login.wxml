@@ -17,7 +17,16 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
+  
   <view class="usermotto">
-    <button bindtap="login" type="primary">授权登录</button>
+    <text class="user-motto">{{motto}}</text>
   </view>
+
+  <block wx:if="{{!openId}}">
+    <button class="register" bindtap="toRegiser">立即领取健康码</button>
+  </block>
+  <block wx:if="{{openId}}">
+    <button class="register" bindtap="toIndex">您已领取，立即查看</button>
+  </block>
+
 </view>

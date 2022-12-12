@@ -1,0 +1,64 @@
+<!--pages/Health_Details/Health_Details.wxml-->
+<view class="health_details" wx:if="{{punchOrNot}}">
+  <image class="no_abnormal_conditions" src="../../images/no_abnormal_conditions.png"></image>
+  <text class="QR_Code_description">未见异常</text>
+  <view>
+    <text class="describe">按照目前掌握的防疫相关数据，暂未发现您存在与疫情相关异常健康状况。防疫相关数据会随着疫情发展及时更新，此次查询并不会表示排除您的防疫相关健康风险。
+    
+    </text>
+  </view>
+  <text class="tip">注：数据在不断汇聚和完善中，查询结果进攻参考</text>
+</view>
+
+<view class="health_details_1" wx:if="{{!punchOrNot}}">
+  <image class="noPunch" src="../../images/QR_code_interpretation_icon.png"></image>
+      <text class="noPunchDescription">尚未打卡</text>
+  <text class="describe_1">您尚未完成每日健康打卡，无法查询您的健康状态，请打卡后查看~
+  
+  </text>
+
+  <text class="tip_1">>>去打卡</text>
+</view>
+
+<view class="health_infomation" wx:if="{{punchOrNot}}">
+  <text class="health_declaration">健康申报信息</text>
+  <view class="health_list">
+    <view class="health_item">
+      <image class="health_item_image" src="../../images/green_point.png"></image>
+      <text class="health_item_name">健康打卡时间</text>
+      <view class="health_item_content">{{hsTime}}</view>
+    </view>
+    <view class="health_item">
+      <image class="health_item_image" src="../../images/green_point.png"></image>
+      <text class="health_item_name">当前居住地</text>
+      <view class="health_item_content">{{region}}</view>
+    </view>
+    <view class="health_item">
+      <image class="health_item_image" src="../../images/green_point.png"></image>
+      <text class="health_item_name">当前居住地是否高风险</text>
+      <view class="health_item_content">{{hsHigh}}</view>
+    </view>
+    <view class="health_item">
+      <image class="health_item_image" src="../../images/green_point.png"></image>
+      <text class="health_item_name">近7天内您是否接触过新冠肺炎确诊或疑似患者</text>
+      <view class="health_item_content">{{hsDiagnosis}}</view>
+    </view>
+    <view class="health_item">
+      <image class="health_item_image" src="../../images/green_point.png"></image>
+      <text class="health_item_name">当前健康状况</text>
+      <view class="health_item_content">{{hsStatus}}</view>
+    </view>
+    <view class="health_item">
+      <image class="health_item_image" src="../../images/green_point.png"></image>
+      <text class="health_item_name">当前体温（℃）</text>
+      <view class="health_item_content">{{hsTemper}}</view>
+    </view>
+    <view class="health_item">
+      <image class="health_item_image" src="../../images/green_point.png"></image>
+      <text class="health_item_name">联系电话</text>
+      <view class="health_item_content">{{phone}}</view>
+    </view>
+</view>
+
+  <view class="footer">宁夏大学信息工程学院</view>
+</view>

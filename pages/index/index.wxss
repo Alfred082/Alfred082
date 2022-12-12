@@ -87,13 +87,29 @@ page {
   font-weight: bold;
   color: #29cb76;
   overflow: hidden;
-  font-family: '黑体';
+  font-family: 'sans-serif;';
   text-overflow: ellipsis;
   white-space: nowrap;
   display: block;
   position: absolute;
   padding-left: 645rpx;
-  top: 487rpx;
+  top: 481rpx;
+  transform: translateX(-50%); /* 移动元素本身50% */
+}
+
+.noPunchDescription{
+  font-size: 45rpx;
+  font-weight: bold;
+  color: #d7ddda;
+  overflow: hidden;
+  font-family:sans-serif;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  position: absolute;
+  padding-left: 645rpx;
+  top: 465rpx;
+  left: 30rpx;
   transform: translateX(-50%); /* 移动元素本身50% */
 }
 
@@ -104,6 +120,16 @@ page {
   position: absolute;
   left: 200rpx;
   top: 480rpx;
+  transform: translateX(-50%); /* 移动元素本身50% */
+ }
+
+ /* 没有打卡 */
+ .noPunch{
+  height: 55rpx;
+  width: 55rpx;
+  position: absolute;
+  left: 220rpx;
+  top: 469rpx;
   transform: translateX(-50%); /* 移动元素本身50% */
  }
 
@@ -118,12 +144,18 @@ page {
 
  /* 二维码 */
 .flex-center {
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
   position: absolute;
-  left: 50%;
-  top: 55rpx;
+  left: 330rpx;
+  top: 100rpx;
+  transform: translateX(-50%); /* 移动元素本身50% */
+}
+
+.greyQRImg{
+  width: 350rpx;
+  height: 350rpx;
+  position: absolute;
+  left: 330rpx;
+  top: 100rpx;
   transform: translateX(-50%); /* 移动元素本身50% */
 }
 
@@ -256,7 +288,6 @@ page {
   box-sizing: border-box;
   align-items: center;
   border-bottom: 1rpx solid #e7e6e6;
-  
  }
 
  .services_item_image {
@@ -283,14 +314,13 @@ page {
 }
 
 .footer {
-  position: absolute;
-  left: 105rpx;
-  top: 1550rpx;
-  height: 200rpx;
-  margin: 40rpx auto 60rpx;
-  display: flex;
-  align-items: center;
   color: #8c8c8c;
+  font-size: 28rpx;
+  position: absolute;
+  top: 1650rpx;
+  bottom: 100rpx;
+  height: 100rpx;
+  left: 230rpx;
 }
 
 .footer button, .header button {

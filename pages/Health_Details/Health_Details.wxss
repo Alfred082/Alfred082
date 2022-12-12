@@ -1,0 +1,222 @@
+/* pages/Health_Details/Health_Details.wxss */
+page {
+  background: #f5f5f5;
+}
+
+.health_details {
+  position: absolute;
+  top: 70rpx;
+  left: 50%;
+  border-radius: 8rpx;
+  transform: translateX(-50%);
+  width: 630rpx;
+  height: 460rpx;
+  background: #fff;
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.no_abnormal_conditions {
+  height: 90rpx;
+  width: 90rpx;
+  position: absolute;
+  left: 190rpx;
+  top: 40rpx;
+  transform: translateX(-50%); /* 移动元素本身50% */
+}
+.QR_Code_description {
+  font-size: 60rpx;
+  font-weight: bold;
+  color: #29cb76;
+  overflow: hidden;
+  font-family: 'sans-serif;';
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  position: absolute;
+  padding-left: 645rpx;
+  top: 40rpx;
+  left: 50rpx;
+  transform: translateX(-50%); /* 移动元素本身50% */
+}
+
+.noPunch {
+  height: 90rpx;
+  width: 90rpx;
+  position: absolute;
+  left: 190rpx;
+  top: 40rpx;
+  transform: translateX(-50%); /* 移动元素本身50% */
+}
+
+.noPunchDescription {
+  font-size: 60rpx;
+  font-weight: bold;
+  color: #d7ddda;
+  overflow: hidden;
+  font-family:sans-serif;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  position: absolute;
+  padding-left: 645rpx;
+  top: 40rpx;
+  left: 50rpx;
+  transform: translateX(-50%); /* 移动元素本身50% */
+}
+
+.describe {
+  width: 570rpx;
+  font-size: 30rpx;
+  color: #918d8d;
+  line-height: 1.5;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  border-bottom: 1rpx solid #e7e6e6;
+  position: absolute;
+  left: 50rpx;
+  top: 160rpx;
+}
+
+.tip {
+  width: 570rpx;
+  font-size: 25rpx;
+  color: #918d8d;
+  line-height: 1.5;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  position: absolute;
+  left: 60rpx;
+  top: 420rpx;
+}
+
+.health_details_1 {
+  position: absolute;
+  top: 70rpx;
+  left: 50%;
+  border-radius: 8rpx;
+  transform: translateX(-50%);
+  width: 630rpx;
+  height: 460rpx;
+  background: #fff;
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.describe_1 {
+  width: 570rpx;
+  font-size: 37rpx;
+  color: #918d8d;
+  line-height: 1.5;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  position: absolute;
+  left: 65rpx;
+  top: 200rpx;
+}
+
+.tip_1 {
+  width: 570rpx;
+  font-size: 37rpx;
+  color: #bb313d;
+  line-height: 1.5;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  position: absolute;
+  left: 240rpx;
+  top: 370rpx;
+}
+
+.health_infomation {
+  position: absolute;
+  top: 630rpx;
+  left: 50%;
+  border-radius: 8rpx;
+  transform: translateX(-50%);
+  width: 630rpx;
+  height: 1550rpx;
+  background: #fff;
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.health_declaration {
+  width: 570rpx;
+  height: 120rpx;
+  font-size: 48rpx;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #242121;
+  line-height: 1.5;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  border-bottom: 1rpx solid #e7e6e6;
+  position: absolute;
+  left: 50rpx;
+  top: 10rpx;
+}
+
+.health_list {
+  position: absolute;
+  left: 30rpx;
+  width: 560rpx;
+  top: 130rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.health_item {
+  width: 627rpx;
+  height: 200rpx;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+}
+.health_item_image {
+  width: 70rpx;
+  height: 70rpx;
+  margin-bottom: 100rpx;
+}
+
+.health_item_name {
+  position: absolute;
+  left: -130rpx;
+  font-size: 37rpx;
+  color: #312f2f;
+  margin-left: 20rpx;
+  margin-bottom: 100rpx;
+  padding-left: 187rpx;
+  page-break-after: auto;
+}
+.health_item_content {
+  position: absolute;
+  left: 20rpx;
+  font-size: 32rpx;
+  color: #787878;
+  page-break-after: auto;
+  background-attachment: fixed;
+  line-height: 50px;
+  width: 515rpx;
+  height: 100rpx;
+  background-color: #fafafa;
+  margin-top: 100rpx;
+  padding-left: 60rpx;
+  border-radius: 10rpx;
+}
+
+.footer {
+  color: #8c8c8c;
+  font-size: 28rpx;
+  position: absolute;
+  top: 1650rpx;
+  bottom: 100rpx;
+  height: 100rpx;
+  left: 180rpx;
+}

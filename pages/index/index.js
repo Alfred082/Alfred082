@@ -1,12 +1,19 @@
 // pages/index/index.js
 import drawQrcode from '../../utils/weapp.qrcode.esm.js'
+import http from '../../utils/api.js';
+const app = getApp()
+let store = require("../../utils/store.js")
+let router = require("../../utils/router.js")
+let Api = app.Api
 var util=require('../../utils/util'); 
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    id:store.getItem("openId"),
     Time:'',
     qrTxt: 'https://www.bilibili.com/',
     operationList: [
@@ -20,8 +27,17 @@ Page({
     servicesList: [
       {id: 1, name: '健康出入校园', icon: '../../images/services_icron1.png', more: '../../images/services_icron3.png'},
       {id: 2, name: '健康码申诉', icon: '../../images/services_icron2.png', more: '../../images/services_icron3.png'}
-    ]
+    ],
+    userId: true,
+    userName: '',
+    userIdCard: '',
+    hideUserName: '',
+    hideUserIdCard:'',
+    punchOrNot: true
+    
   },
+
+  
 
   /**
    * 生命周期函数--监听页面加载
@@ -32,13 +48,52 @@ Page({
       that.setData({
           Time: util.formatTime(new Date())
       });    
-    },1000);  
+    },1000);
+    wx.request({
+      url: 'https://www.mislaydream.com/citizen/find/',
+      method: 'GET',
+      data: {
+        WXID: this.data.id
+      },
+      success:(res) => {
+        console.log(res)
+        console.log(res.data)
+        this.setData({
+          userName: res.data.data.name,
+          userIdCard: res.data.data.card
+        })
+        wx.setStorageSync('userInfo',res.data.data)
+        var name = res.data.data.name;
+        var card = res.data.data.card;
+        var hideName = name.substr(-1);
+        var hideCard = card.substr(-4);
+        this.setData({
+          hideUserName: hideName,
+          hideUserIdCard: hideCard
+        })
+      }
+    });
+    this.setData({
+      punchOrNot: false
+    });
   },
 
   // 获取当前时间
   getTime:function(e){
     var that = this;
     var currentTime = util.formatTime(new Date());
+  },
+
+  // 
+  toHealthDetails() {
+    wx.reLaunch({
+      url: '../Health_Details/Health_Details',
+    })
+  },
+  toHealthPunch() {
+    wx.reLaunch({
+      url: '../Health_Punch/Health_Punch',
+    })
   },
  
 

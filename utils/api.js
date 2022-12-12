@@ -1,5 +1,5 @@
 // let baseUrl = `https://wxapp.geekreading.cn/api/`;
-let baseUrl = `http://192.168.0.103:3000/`;
+let baseUrl = `https://www.mislaydream.com/`;
 
 function getHeader() {
     if (wx.getStorageSync('Token')) {
@@ -15,13 +15,16 @@ function getHeader() {
 }
 
 function getPromise(url, data, method) {
+    var json = JSON.stringify(data)
+    console.log(json)
     return new Promise((resolve, reject) => {
         wx.request({
             url: `${baseUrl}${url}`,
             header: getHeader(),
             method: method,
-            data: data,
+            data: json,
             success: function(res) {
+                console.log(res)
                 resolve(res)
             },
             fail: function(err) {

@@ -1,0 +1,10 @@
+{
+  "usingComponents": {},
+  "backgroundTextStyle": "dark",
+  "navigationBarTitleText": "我的健康详情",
+  "backgroundColor": "#ffffff",
+  "onReachBottomDistance": 50,
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": false
+}

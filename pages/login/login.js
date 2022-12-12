@@ -1,15 +1,18 @@
 // index.js
 // 获取应用实例
 const app = getApp()
+let store = require('../../utils/store.js')
+let router = require('../../utils/router.js')
 
 Page({
   data: {
-    motto: 'Hello World',
+    motto: '防疫健康信息码',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     canIUseGetUserProfile: false,
-    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
+    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName'), // 如需尝试获取用户信息可改为false
+    openId: ''
   },
   // 事件处理函数
   bindViewTap() {
@@ -17,11 +20,23 @@ Page({
       url: '../logs/logs'
     })
   },
+  // 跳转到到首页
+  toIndex() {
+    wx.reLaunch({
+      url: '../index/index',
+    })
+  },
+  // 跳转到身份绑定页面
+  toRegiser() {
+    router.push("register")
+  },
   onLoad() {
     if (wx.getUserProfile) {
       this.setData({
-        canIUseGetUserProfile: true
+        canIUseGetUserProfile: true,
+        openId: store.getItem("openId")
       })
+      console.log(this.data.openId)
     }
   },
   getUserProfile(e) {
@@ -32,9 +47,9 @@ Page({
         console.log(res)
         this.setData({
           userInfo: res.userInfo,
-          hasUserInfo: true
+          hasUserInfo: true,
+          userInfo: e.detail.userInfo,
         })
-        this.getPageId();
       }
     })
   },
@@ -44,23 +59,6 @@ Page({
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
-    })
-  },
-  login(e) {
-    wx.login({
-      success (res) {
-        if (res.code) {
-          //发起网络请求
-          wx.request({
-            url: 'https://example.com/onLogin',
-            data: {
-              code: res.code
-            }
-          })
-        } else {
-          console.log('登录失败！' + res.errMsg)
-        }
-      }
     })
   }
 })
